@@ -1,0 +1,74 @@
+#include <stdio.h>
+
+void mod_ciegas()
+{
+    printf("No hay conexión desde tierra pero el cubesat entra en modo supervivencia\n");
+}
+void mod_surv()
+{
+    printf("Se ha establecido conexión con el cubesat\n");
+    printf("Entrando al modo de supervivencia\n");
+}
+void mod_norm()
+{
+    printf("Hay suficiente energía y todo funciona como debe\n");
+    printf("Entrando al modo normal\n");
+}
+void mod_trans()
+{
+    printf("Se reciben constantemente datos de telemetría\n");
+    printf("Entrando al modo de transmisión\n");
+}
+void mod_pay()
+{
+    printf("Se reciben constantemente datos de telemetría\n");
+    printf("Entrando al modo de transmisión\n");
+}
+int main()
+{
+    int caso;
+    printf("INGRESE UN POSIBLE CASO EN QUE SE ENFRENTE LA MISION\n");
+    printf("CASO 001\n");
+    printf("CASO 010\n");
+    printf("CASO 100\n");
+    printf("CASO 011\n");
+    printf("CASO 110\n");
+    printf("CASO 111\n\n");
+    scanf("%d", &caso);
+    switch(caso)
+    {
+        case 001:
+        mod_ciegas();
+        printf("No se pudo establecer conexión con el cubesat, está a ciegas\n");
+        break;
+        case 010:
+        mod_surv();
+        mod_norm();
+        mod_trans();
+        mod_pay();
+        printf("Se pudo establecer conexión con el cubesat y todo marcha bien\n");
+        break;
+        case 100:
+        mod_surv();
+        printf("Se pudo establecer conexión con el cubesat y pero no hay suficiente energía\n");
+        break;
+        case 011:
+        mod_norm();
+        mod_surv();
+        printf("Se pudo establecer conexión con el cubesat, hay suficiente energía, pero no hay datos recibidos de telemetría\n");
+        break;
+        case 110:
+        mod_trans();
+        mod_surv();
+        printf("Se pudo establecer conexión con el cubesat, hay suficiente energía, hay datos recibidos de telemetría, pero los demás sensores están fallando y no almacenan datos\n");
+        break;
+        case 111:
+        mod_surv();
+        printf("Alguno de los modos no funciona según lo esperado\n");
+        break;
+        default:
+        printf("No es válido el escenario que quiere desplegar\n");
+        break;
+    }
+    return 0;
+}
