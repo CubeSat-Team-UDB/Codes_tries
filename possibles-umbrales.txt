@@ -1,0 +1,25 @@
+Para transmisión:
+- La altura no debe ser mayor a la del alcance máximo de la tec de comunicaciones LoRa.
+-- Tentativamente: 30 km MAX
+
+- La temperatura no debe ser demasiado alta.
+-- Tentativamente: 40 °C MAX
+
+- El suministro de energía no debe ser inferior a los 3.3V con los que funciona el módulo LoRa.
+-- Umbral: 3.3V MIN
+EL UMBRAL ESTRICTAMENTE NECESARIO ES EL DE LA ALTURA, PUESTO QUE LOS OTROS DOS DEBEN HABER SIDO
+CONSIDERADOS PARA ENCONTRARSE EN EL MODO NORMAL.
+
+Para Payload:
+- La temperatura no debe ser demasiado alta.
+-- Tentativamente: 40 °C MAX
+
+- El suministro de energía no debe ser inferior a 5V usuales para los sensores.
+-- Umbral: 5V MIN
+
+- La información de la memoria externa del cubesat no debe estar llena.
+-- Tentativamente: 16 GB MAX
+
+CUALQUIERA DE ESTOS QUE FALLE ENTONCES EL CUBESAT SE COLOCA EN MODO SUPERVIVENCIA Y NO PUEDE
+CONSIDERARSE QUE ESTÉ EN MODO NORMAL.
+
