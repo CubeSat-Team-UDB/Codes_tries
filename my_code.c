@@ -33,7 +33,7 @@ int main() {
     if (temperatura <= TEMP_MAX) {
         printf("Temperatura dentro del rango.\n");
     } else {
-        printf("Temperatura fuera del rango. (Límite: %.1f °C)\n", TEMP_MAX);
+        printf("Temperatura fuera del rango. (Límite: %.1d °C)\n", TEMP_MAX);
     }
     
     printf("Introduce la altura en kilómetros: ");
