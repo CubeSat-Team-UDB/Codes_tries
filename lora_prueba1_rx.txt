@@ -15,6 +15,7 @@ void setup() {
 
   // Inicializar el módulo LoRa
   Serial.print(F("[SX1276] Initializing ... "));
+  //(Freq, BW, SF, CRC, sync word, out power, preamble length, amplifier gain)
   int state = radio.begin(915.0, 125.0, 9, 7, 0x34, 10, 8, 0);
   if (state == RADIOLIB_ERR_NONE) {
     Serial.println(F("success!"));
