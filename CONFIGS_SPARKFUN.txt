@@ -1,0 +1,30 @@
+READ ME
+-------------------------------------------------------------------------------------------
+In Arduino IDE
+
+Past the following link into the -- Preferences > Settings > Additionals Boards Manager URLs:
+https://raw.githubusercontent.com/stm32duino/BoardManagerFiles/main/package_stmicroelectronics_index.json
+
+-Download RadioLib from Jan Gromes library
+
+-Download STM32 MCU based boards from BOards Manager
+
+-When upploading program for the first time, make sure to get open "STM32CubeProgrammer"
+
+-WHen upploading program for the first time, run the Debug mode (DFU)
+
+RECOMMENDATIONS
+-Make sure to run the script on your computer's local files.
+
+
+ENABLING THE STM32 SERIAL PORT
+Open Tools in Arduino IDE
+
+Debug symbols and core logs: "NONE"
+Optimize: "Smallest (-Os default)"
+Board part number: "Sparkfun MicroMod STM32F405"
+C Runtime Library: "Newlib Nano (default)"
+Upload method: "STM32CubeProgramer (DFU)"
+USB support (if available): "CDC (generic 'Serial' supersede U(S)ART)"
+U(S)ART support: "Enable (generic 'Serial')"
+USB speed (if available): "Low/Full Speed"
